@@ -18,11 +18,11 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-west-2  # default region (optional)
+          aws-region: us-east-1  # default region (optional)
 
       - name: Create S3 bucket
         run: |
           chmod +x create-s3.sh
-          ./create-s3.sh "my-unique-saadaxyz" "us-west-2"
+          ./create-s3.sh "my-unique-saadaxyz" "us-east-1"
 
 
